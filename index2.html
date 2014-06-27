@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <!--<link rel="stylesheet" href="css/main.css">-->
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		
+		<style>
+body { 	
+	font-family: Verdana;
+}
+
+.slide-rule {
+	width: 2000px;
+	height: 1200px;
+	position: relative;
+	-webkit-transform-origin: top left;
+	-webkit-transform: scale(.5);
+}
+
+.body {
+	width: 1800px;
+	height: 600px;
+	position: absolute;
+	top: 300px;
+	left: 100px;
+	border-radius: 5px 5px;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2);
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+}
+
+.slide-background {
+	width: 1780px;
+	height: 180px;
+	position: absolute;
+	top: 500px;
+	left: 100px;
+	background: #555;
+	color: #777;
+	font-size: 40px;
+	padding: 10px;
+}
+
+.slide {
+	width: 1800px;
+	height: 200px;
+	position: absolute;
+	top: 500px;
+	left: 100px;
+	background: #eee;
+}
+
+.cursor {
+	width: 200px;
+	height: 1200px;
+	background-color: rgba(192, 192, 255, 0.2);
+	position: absolute;
+	top: 0px;
+	left: 600px;
+	border-radius: 20px;
+}
+
+.cursor-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 1200px;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(192,192,255,.2)), color-stop(50%,rgba(192,192,255,1)), color-stop(100%,rgba(192,192,255,.2)));
+}
+
+.marker {
+	position: absolute;
+	border-left: 1px solid black;
+	width: 1px;
+}
+
+.label {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.sub-label {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	text-align: left;
+}
+
+.hairline {
+	position: absolute;
+	border-left: 1px solid red;
+	width: 1px;
+	top: 0;
+	left: 100px;
+	height: 1200px;
+}
+
+.cursor .slide-rule {
+	-webkit-transform-origin: top left;
+	-webkit-transform: scale(2);
+	top: -600px;
+	left: -1300px;
+}
+
+		</style>
+    </head>
+    <body>
+		<div class="slide-rule">
+			<div class="body"></div>
+			<div class="slide-background">slide rule</div>
+			<div class="slide drag-slide"></div>
+			<div class="cursor">
+				<div class="cursor-mask">
+					<div class="slide-rule">
+						<div class="body"></div>
+						<div class="slide-background">slide rule</div>
+						<div class="slide clone-slide"></div>
+					</div>
+				</div>
+				<div class="hairline"></div>
+			</div>
+		</div>
+		
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+		<script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="js/vendor/jquery.ui.touch-punch.min.js"></script>
+
+		<script src="js/main2.js"></script>
+    </body>
+</html>
